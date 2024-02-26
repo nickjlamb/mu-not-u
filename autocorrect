@@ -1,0 +1,12 @@
+import re
+
+def autocorrect_ug_ml(text):
+    """Replaces 'ug/ml' with 'μg/ml' in a given text."""
+    corrected_text = re.sub(r"\bug/ml", "μg/ml", text)
+    return corrected_text
+
+# Example usage
+original_text = "The concentration is 10 ug/ml. Please use 50 ug/ml for the experiment."
+corrected_text = autocorrect_ug_ml(original_text)
+
+print(corrected_text)
